@@ -8,7 +8,6 @@ a:visited {
 a:hover {
   background-color: white;
   color: black;
-  transform: scale(1.1);
 }
 
 body {
