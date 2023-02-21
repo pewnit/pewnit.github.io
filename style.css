@@ -1,0 +1,53 @@
+a:link,
+a:visited {
+  color: black;
+  text-decoration: underline;
+  transition: all 0.5s ease-in-out;
+}
+
+a:hover {
+  background-color: white;
+  color: black;
+  transform: scale(1.1);
+}
+
+body {
+  text-align: left;
+  margin-bottom: 100px;
+  background-color: white;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.footer-container {
+  position: absolute;
+  bottom: 25%;
+  left: 25%;
+  padding: 0 0 20px 20px;
+  text-align: right;
+}
+
+.footer-container a {
+  display: block;
+  margin: 0 10px 0 0;
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animated-link:hover {
+  color: blue;
+}
+
+.footer-container a:hover {
+  color: white;
+  background-color: inherit;
+  transition: all 0.5s ease-in-out;
+}
