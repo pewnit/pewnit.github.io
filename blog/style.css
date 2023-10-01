@@ -20,7 +20,7 @@ body {
 
 .footer-container {
   position: absolute;
-  bottom: 20%;
+  bottom: 7%;
   left: 25%;
   padding: 0 0 20px 20px;
   text-align: right;
@@ -47,6 +47,24 @@ body {
 }
 
 .footer-container a:hover {
+  color: white;
+  background-color: inherit;
+  transition: all 0.5s ease-in-out;
+}
+
+.blog {
+  position: absolute;
+  top: 7%;
+  left: 35%;
+  padding-right: 15%;
+}
+
+.blog a {
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.blog a:hover {
   color: white;
   background-color: inherit;
   transition: all 0.5s ease-in-out;
