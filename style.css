@@ -1,24 +1,63 @@
+a {
+  transition: all 0.5s ease-in-out;
+}
+
 a:link,
 a:visited {
   color: black;
   text-decoration: none;
-  transition: all 0.5s ease-in-out;
 }
 
 a:hover {
-  background-color: white;
-  color: black;
+  color: white;
 }
 
 body {
-  text-align: left;
-  margin-bottom: 100px;
   background-color: white;
   transition: background-color 0.5s ease-in-out;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
+  text-align: right;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+body:has(#resume:hover) {
+  background-color: #00ac72;
+}
+body:has(#resume:hover) a:not(#resume) {
+  color: transparent;
+}
+body:has(#github:hover) {
+  background-color: #2c2c2c;
+}
+body:has(#github:hover) a:not(#github) {
+  color: transparent;
+}
+body:has(#linkedin:hover) {
+  background-color: #0072b1;
+}
+body:has(#linkedin:hover) a:not(#linkedin) {
+  color: transparent;
+}
+body:has(#twitter:hover) {
+  background-color: #1DA1F2;
+}
+body:has(#twitter:hover) a:not(#twitter) {
+  color: transparent;
+}
+body:has(#youtube:hover) {
+  background-color: #CD201F;
+}
+body:has(#youtube:hover) a:not(#youtube) {
+  color: transparent;
+}
+body:has(#blog:hover) {
+  background-color: #A0ED86;
+}
+body:has(#blog:hover) a:not(#blog) {
+  color: transparent;
 }
 
-.footer-container {
+.container {
   position: absolute;
   bottom: 20%;
   left: 25%;
@@ -26,7 +65,7 @@ body {
   text-align: right;
 }
 
-.footer-container a {
+.container a {
   display: block;
   margin: 0 10px 0 0;
   opacity: 0;
@@ -40,14 +79,4 @@ body {
   100% {
     opacity: 1;
   }
-}
-
-.animated-link:hover {
-  color: blue;
-}
-
-.footer-container a:hover {
-  color: white;
-  background-color: inherit;
-  transition: all 0.5s ease-in-out;
-}
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,64 @@
+$ids: "#resume" #00ac72,
+  "#github" #2c2c2c,
+  "#linkedin" #0072b1,
+  "#twitter" #1DA1F2,
+  "#youtube" #CD201F,
+  "#blog" #A0ED86;
+
+a {
+  transition: all 0.5s ease-in-out;
+}
+
+a:link,
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+}
+
+body {
+  background-color: white;
+  transition: background-color 0.5s ease-in-out;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: right;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  @each $id, $color in $ids {
+    &:has(#{$id}:hover) {
+      background-color: $color;
+    }
+
+    &:has(#{$id}:hover) a:not(#{$id}) {
+      color: transparent;
+    }
+  }
+}
+
+.container {
+  position: absolute;
+  bottom: 20%;
+  left: 25%;
+  padding: 0 0 20px 20px;
+  text-align: right;
+}
+
+.container a {
+  display: block;
+  margin: 0 10px 0 0;
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
