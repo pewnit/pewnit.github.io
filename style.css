@@ -50,10 +50,16 @@ body:has(#youtube:hover) {
 body:has(#youtube:hover) a:not(#youtube) {
   color: transparent;
 }
-body:has(#blog:hover) {
+body:has(#scrapyard:hover) {
   background-color: #A0ED86;
 }
-body:has(#blog:hover) a:not(#blog) {
+body:has(#scrapyard:hover) a:not(#scrapyard) {
+  color: transparent;
+}
+body:has(#qawolf:hover) {
+  background-color: #3838EF;
+}
+body:has(#qawolf:hover) a:not(#qawolf) {
   color: transparent;
 }
 
